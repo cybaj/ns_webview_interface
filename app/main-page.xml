@@ -1,6 +1,6 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" loaded="pagedLoaded">
     <ActionBar title="My App" icon=""></ActionBar>
     <StackLayout class="p-20">
-        <WebView id="webView" src="https://www.naver.com" loaded="webViewLoaded"/>
+        <WebView id="webView" src="~/www/index.html" loaded="webViewLoaded"/>
     </StackLayout>
 </Page>
