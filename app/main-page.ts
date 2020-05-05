@@ -16,23 +16,28 @@ export function navigatingTo(args: EventData) {
     against the object returned by createViewModel().
     */
     page.bindingContext = webViewInterfaceDemoVM;
-    setupWebViewInterface(page) 
 }
 
 export function pageLoaded(args: EventData) {
     const page = <Page>args.object;
+    setupWebViewInterface(page) 
 }
 
 export function webViewLoaded(args: EventData) {
     const webView = <WebView>args.object;
+    console.log('webView: ', webView)
+    console.log('nativeView: ', webView.nativeView)
+    console.log('url: ', webView.nativeView.url)
+    console.log('agent: ', webView.nativeView.customUserAgent)
+    console.log('isLoading: ', webView.nativeView.isLoading)
 }
 
 /**
  * Initializes webViewInterface for communication between webview and android/ios
  */
 function setupWebViewInterface(page: Page){
+    var webView = page.getViewById('webView');
     console.log('webView: ', webView)
     console.log('nativeView: ', webView.nativeView)
-    var webView = page.getViewById('webView');
-    oLangWebViewInterface = new webViewInterfaceModule.WebViewInterface(webView);
+    // oLangWebViewInterface = new webViewInterfaceModule.WebViewInterface(webView);
 }
