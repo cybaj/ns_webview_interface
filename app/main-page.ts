@@ -25,11 +25,6 @@ export function pageLoaded(args: EventData) {
 
 export function webViewLoaded(args: EventData) {
     const webView = <WebView>args.object;
-    console.log('webView: ', webView)
-    console.log('nativeView: ', webView.nativeView)
-    console.log('url: ', webView.nativeView.url)
-    console.log('agent: ', webView.nativeView.customUserAgent)
-    console.log('isLoading: ', webView.nativeView.isLoading)
 }
 
 /**
@@ -37,7 +32,5 @@ export function webViewLoaded(args: EventData) {
  */
 function setupWebViewInterface(page: Page){
     var webView = page.getViewById('webView');
-    console.log('webView: ', webView)
-    console.log('nativeView: ', webView.nativeView)
     // oLangWebViewInterface = new webViewInterfaceModule.WebViewInterface(webView);
 }
