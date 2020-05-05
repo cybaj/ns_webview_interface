@@ -32,5 +32,5 @@ export function webViewLoaded(args: EventData) {
  */
 function setupWebViewInterface(page: Page){
     var webView = page.getViewById('webView');
-    // oLangWebViewInterface = new webViewInterfaceModule.WebViewInterface(webView);
+    oLangWebViewInterface = new webViewInterfaceModule.WebViewInterface(webView);
 }
